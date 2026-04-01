@@ -3,6 +3,7 @@ import './App.css'
 
 function App() {
   const [theme, setTheme] = useState('dark')
+  const isDarkTheme = theme === 'dark'
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
@@ -38,6 +39,7 @@ function App() {
     {
       title: 'Software Development Engineer',
       company: 'Yitro Tech',
+      companyUrl: 'https://yitro.tech/',
       period: 'Dec 2025 - Present',
       points: [
         'Building modern web apps using React, Next.js, and Tailwind CSS.',
@@ -48,6 +50,7 @@ function App() {
     {
       title: 'Full Stack Developer',
       company: 'Contus Tech',
+      companyUrl: 'https://www.contus.com/',
       period: 'Nov 2024 - Oct 2025',
       points: [
         'Built scalable applications with React and Node.js.',
@@ -58,6 +61,7 @@ function App() {
     {
       title: 'Full Stack Developer',
       company: 'Nibav Lifts',
+      companyUrl: 'https://www.nibavlifts.in/',
       period: 'Mar 2024 - Oct 2024',
       points: [
         'Developed systems using Next.js, Node.js, and SQL.',
@@ -68,6 +72,7 @@ function App() {
     {
       title: 'Full Stack Developer',
       company: 'Ocean Academy',
+      companyUrl: 'https://oceanacademy.in/',
       period: 'Apr 2020 - Mar 2024',
       points: [
         'Built web and mobile apps with React, Flutter, Node.js, Python, and MongoDB.',
@@ -129,6 +134,13 @@ function App() {
     },
   ]
 
+  const companyLinks = [
+    { name: 'Ocean Academy', url: 'https://oceanacademy.in/', label: 'Learning Platform' },
+    { name: 'Yitro Tech', url: 'https://yitro.tech/', label: 'Current Role' },
+    { name: 'Contus', url: 'https://www.contus.com/', label: 'Product Engineering' },
+    { name: 'Nibav Lifts', url: 'https://www.nibavlifts.in/', label: 'Customer Platform' },
+  ]
+
   return (
     <main className="game-shell">
       <section className="hero-panel card reveal-on-scroll">
@@ -167,18 +179,32 @@ function App() {
             </a>
             <button
               type="button"
-              className="btn-secondary"
+              className="btn-secondary theme-toggle-btn"
               onClick={() => setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))}
             >
-              Switch to {theme === 'dark' ? 'Light' : 'Dark'} Theme
+              <span className="theme-icon" aria-hidden="true">
+                {isDarkTheme ? (
+                  <svg viewBox="0 0 24 24" role="presentation">
+                    <circle cx="12" cy="12" r="4" />
+                    <path d="M12 2V5M12 19V22M2 12H5M19 12H22M4.9 4.9L7 7M17 17L19.1 19.1M4.9 19.1L7 17M17 7L19.1 4.9" />
+                  </svg>
+                ) : (
+                  <svg viewBox="0 0 24 24" role="presentation">
+                    <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4 7 7 0 0 0 20 14.5Z" />
+                  </svg>
+                )}
+              </span>
+              Switch to {isDarkTheme ? 'Light' : 'Dark'} Theme
             </button>
           </div>
         </div>
 
         <div className="avatar-panel">
-          <div className="avatar-placeholder" aria-label="Profile image placeholder">
-            <span>Avatar Placeholder</span>
-          </div>
+          <img
+            className="profile-avatar"
+            src="/profile_image.jpg"
+            alt="Thamizharasan profile"
+          />
           <div className="xp-bar" role="presentation">
             <div className="xp-fill" />
           </div>
@@ -195,6 +221,28 @@ function App() {
         ))}
       </section>
 
+      <section className="card section-block company-panel reveal-on-scroll">
+        <div className="section-head">
+          <p className="eyebrow">Guild Links</p>
+          <h2>Company Portals</h2>
+        </div>
+        <div className="company-grid">
+          {companyLinks.map((company) => (
+            <a
+              className="company-link"
+              key={company.name}
+              href={company.url}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <p>{company.label}</p>
+              <h3>{company.name}</h3>
+              <span>Visit Website</span>
+            </a>
+          ))}
+        </div>
+      </section>
+
       <section className="card section-block quests-panel reveal-on-scroll">
         <div className="section-head">
           <p className="eyebrow">Active Quests</p>
@@ -205,9 +253,12 @@ function App() {
             <article className="quest-item" key={`${job.company}-${job.period}`}>
               <header>
                 <h3>{job.title}</h3>
-                <p>
-                  {job.company} | {job.period}
-                </p>
+                <div className="quest-meta">
+                  <a href={job.companyUrl} target="_blank" rel="noreferrer">
+                    {job.company}
+                  </a>
+                  <p>{job.period}</p>
+                </div>
               </header>
               <ul>
                 {job.points.map((point) => (
