@@ -118,13 +118,17 @@ export const skillTree = [
     branch: 'Design + Creative',
     skills: ['Figma', 'Photoshop', 'Illustrator', 'After Effects', 'Premiere Pro'],
   },
+  {
+    branch: 'AI Workflow',
+    skills: ['Vibe Coding', 'GitHub Copilot', 'Gemini', 'ChatGPT', 'Figma Make', 'Ollama (Local)'],
+  },
 ]
 
 export const companyLinks = [
-  { name: 'Ocean Academy', url: 'https://oceanacademy.in/', label: 'Learning Platform' },
   { name: 'Yitro Tech', url: 'https://yitro.tech/', label: 'Current Role' },
   { name: 'Contus', url: 'https://www.contus.com/', label: 'Product Engineering' },
   { name: 'Nibav Lifts', url: 'https://www.nibavlifts.in/', label: 'Customer Platform' },
+  { name: 'Ocean Academy', url: 'https://oceanacademy.in/', label: 'Learning Platform' },
 ]
 
 export const education = [
