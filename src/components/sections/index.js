@@ -1,0 +1,7 @@
+export { HeroSection } from './HeroSection'
+export { StatsSection } from './StatsSection'
+export { CompanySection } from './CompanySection'
+export { ExperienceSection } from './ExperienceSection'
+export { ProjectsSection } from './ProjectsSection'
+export { SkillsSection } from './SkillsSection'
+export { AchievementsSection } from './AchievementsSection'

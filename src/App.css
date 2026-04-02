@@ -156,8 +156,8 @@
   height: 100%;
   width: 0;
   background: linear-gradient(90deg, #0eb9d8, #2ef2b2);
-  animation: xpLoad 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards,
-    pulseXp 2.2s ease-in-out 1.6s infinite;
+  animation: xpLoad 3s ease-in forwards,
+    pulseXp 2.6s ease-in-out 3s infinite;
   transition: filter 0.25s ease;
 }
 
@@ -175,8 +175,8 @@
 
 .avatar-panel:hover .xp-fill {
   filter: none;
-  animation: xpLoad 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards,
-    pulseXp 2.2s ease-in-out 1.6s infinite;
+  animation: xpLoad 3s ease-in forwards,
+    pulseXp 2.6s ease-in-out 3s infinite;
 }
 
 .avatar-panel:hover .xp-text {
