@@ -1,3 +1,6 @@
+import cvFile from '../assets/Jan_2026_Thamizh_CV.docx?url'
+import profileImage from '../assets/profile_image.jpg'
+
 export const profile = {
   name: 'THAMIZHARASAN K',
   tagline:
@@ -7,8 +10,8 @@ export const profile = {
   phone: '+91 80151 22373',
   linkedin: 'https://www.linkedin.com/in/thamizharasan-kumaresan-abb23a243/',
   github: 'https://github.com/thamizhkayal',
-  avatar: '/profile_image.jpg',
-  cvPath: '/Jan_2026_Thamizh_CV.docx',
+  avatar: profileImage,
+  cvPath: cvFile,
 }
 
 export const stats = [
