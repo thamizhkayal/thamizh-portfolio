@@ -7,8 +7,8 @@ export const profile = {
   phone: '+91 80151 22373',
   linkedin: 'https://www.linkedin.com/in/thamizharasan-kumaresan-abb23a243/',
   github: 'https://github.com/thamizhkayal',
-  avatar: '/profile_image.jpg',
-  cvPath: '/Jan_2026_Thamizh_CV.docx',
+  avatar: 'https://raw.githubusercontent.com/thamizhkayal/thamizh-portfolio/refs/heads/main/cv/profile_image.jpg',
+  cvPath: 'https://raw.githubusercontent.com/thamizhkayal/thamizh-portfolio/refs/heads/main/cv/Jan_2026_Thamizh_CV.docx',
 }
 
 export const stats = [
