@@ -1,4 +1,4 @@
-import cvFile from '../assets/Jan_2026_Thamizh_CV.docx?url'
+import cvFile from '../assets/JULY_26_THAMIZH_CV.pdf?url'
 import profileImage from '../assets/profile_image.jpg'
 
 export const profile = {
@@ -18,12 +18,12 @@ export const stats = [
   { label: 'Years Building', value: '6+' },
   { label: 'Core Stack', value: 'MERN + Flutter' },
   { label: 'Production Roles', value: '4' },
-  { label: 'Current Rank', value: 'SDE @ Yitro Tech' },
+  { label: 'Current Rank', value: 'FSD @ Yitro Tech' },
 ]
 
 export const experience = [
   {
-    title: 'Software Development Engineer',
+    title: 'Full Stack Developer',
     company: 'Yitro Tech',
     companyUrl: 'https://yitro.tech/',
     period: 'Dec 2025 - Present',
@@ -34,7 +34,7 @@ export const experience = [
     ],
   },
   {
-    title: 'Full Stack Developer',
+    title: 'Software Engineer II',
     company: 'Contus Tech',
     companyUrl: 'https://www.contus.com/',
     period: 'Nov 2024 - Oct 2025',
@@ -86,6 +86,12 @@ export const projects = [
     stack: 'Flutter, React.js, Firebase, Node.js',
     summary:
       'Smoking cessation app with authentication, live data sync, and behavior-focused user support.',
+  },
+  {
+    name: 'Telemedicine',
+    stack: 'Next.js, Python FastAPI, REST APIs',
+    summary:
+      'Telemedicine platform with authentication, doctor/admin onboarding, profile management, and centralized healthcare dashboards.',
   },
   {
     name: 'OA Live',
